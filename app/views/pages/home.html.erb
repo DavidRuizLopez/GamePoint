@@ -8,12 +8,16 @@
 <div class="m-5">
   <h1 class="text-center mb-3">Ultimas Reviews</h1>
   <div class="cards">
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <h2>Product name</h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
-      </div>
-    </div>
+    <% @articulos.each do |articulo| %>
+      <%= link_to "#" do %>
+        <div class="card-product">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+            <h2><%= articulo.titulo %></h2>
+            <p><%= articulo.nota %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
